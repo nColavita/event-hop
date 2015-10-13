@@ -1,0 +1,28 @@
+<h1>Create a new Event with Event Hop!</h1>
+
+<!-- Here should have all the info for the Place Selected -->
+<!-- Place.name -->
+<!-- Place.address -->
+<!-- Place.website -->
+
+
+<p> <%= @place.name %> </p>
+<p> <%= @place.address %></p>
+<p> <%= @place.website %></p>
+<p> <%= @place.description %> </p>
+
+<%= form_for @event do |f| %>
+
+	<p>
+		<%= f.label :start %>
+		<%= f.datetime_select :start %>
+	</p>
+
+	<p>
+		<%= f.label :description %>
+		<%= f.text_field :description %>
+	</p>
+
+	<%= f.submit %>
+
+<% end %>

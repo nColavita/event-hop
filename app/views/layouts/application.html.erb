@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EventHop</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+
+	<nav>
+		<ul>
+			<% if current_user %>
+				<%= current_user.email %>
+				<% if current_user[:admin] == true %>
+					<%= link_to 'create new place', new_place_path %> 
+				<% end %>
+			<% end %>
+			<%= link_to 'sign up', new_user_registration_path %>
+			<%= link_to 'sign in', new_user_session_path %>
+			<%= link_to 'sign out', destroy_user_session_path, method: :delete %>
+		</ul>
+	</nav>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+<%= yield %>
+
+</body>
+</html>
