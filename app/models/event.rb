@@ -14,9 +14,4 @@ class Event < ActiveRecord::Base
 	def add_current_user_to_events_users
 		users << user
 	end
-
-
-	def send_notification
-		AdminMailer.new_event(self).deliver
-	end
 end
