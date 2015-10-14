@@ -1,2 +1,19 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<h1><%= @place.name %></h1>
+
+<p>Description: <%= @place.description %></p>
+
+
+<h3>Users going!</h3>
+
+<% @event.users.each do |user| %>
+	<%= user.email %>
+	<hr>
+<% end %>
+
+
+<% render 'form' %> 
+
+
+<h3>Join</h3>
+
+<h3>Don't join.</h3>
