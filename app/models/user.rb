@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
 
   has_many :events
   has_many :events_users
+  has_many :posts
 end

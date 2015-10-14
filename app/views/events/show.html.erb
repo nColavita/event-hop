@@ -1,2 +1,25 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<h1><%= @place.name %></h1>
+
+<p>Description: <%= @place.description %></p>
+
+
+<h3>Users going!</h3>
+
+<% @event.users.each do |user| %>
+	<%= user.email %>
+	<hr>
+<% end %>
+
+
+
+<!-- Shows all the posts for this event --> 
+
+	<!-- <%= @event.posts.each do |post| %>
+		<%= post.user.email %>
+		<%= post.body %>
+	<% end %> -->
+
+<!-- Shows all the posts for this event --> 
+
+<h2>Chat Box</h2>
+

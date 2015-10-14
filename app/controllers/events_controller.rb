@@ -1,22 +1,23 @@
 class EventsController < ApplicationController
-	before_action :set_place, only: [:new, :create, :index]
   before_action :authenticate_user!, only:[:new, :create]
   before_action :set_event, only: [:show]
+  before_action :set_place, only: [:create, :new]
 
   def new
     @event = Event.new
-    @place = Place.find_by(params[:place_id])
   end
 
   def index
   end
 
   def show
+    @place = @event.place
+    @post = Post.new
   end
 
   def create
-    @place.events.create(event_params)
-    redirect_to places_path
+    @event = @place.events.create(event_params)
+    redirect_to @event
   end
 
 
@@ -27,11 +28,11 @@ class EventsController < ApplicationController
   end
 
   def set_place
-  	@place = Place.find_by(params[:place_id])
+    @place = Place.find(params[:place_id])
   end
 
   def event_params
-    params.require(:event).permit(:start, :description)
+    params.require(:event).permit(:start, :description).merge(user: current_user)
   end
 
 end
