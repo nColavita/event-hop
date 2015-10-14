@@ -11,7 +11,6 @@ class Event < ActiveRecord::Base
 
 	has_attached_file :photo
 
-
 	def add_current_user_to_events_users
 		users << user
 	end
