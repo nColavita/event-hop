@@ -5,4 +5,8 @@ class Event < ActiveRecord::Base
 	belongs_to :place
 
 	has_attached_file :photo
+
+	def send_notification
+		AdminMailer.new_event(self).deliver
+	end
 end
