@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!, only:[:new, :create]
   before_action :set_event, only: [:show]
+  before_action :set_place, only: [:create, :new]
 
   def new
     @event = Event.new
@@ -11,6 +12,7 @@ class EventsController < ApplicationController
 
   def show
     @place = @event.place
+    @post = Post.new
   end
 
   def create
@@ -23,6 +25,10 @@ class EventsController < ApplicationController
 
   def set_event
     @event = Event.find(params[:id])
+  end
+
+  def set_place
+    @place = Place.find(params[:place_id])
   end
 
   def event_params

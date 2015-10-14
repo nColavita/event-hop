@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  # before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
     @posts = Post.all
@@ -18,8 +18,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(params.require(:post).permit(:body, :title))
-    redirect_to @post, notice: "New post created."
+    @event = Event.find(params[:event_id])
+    Post.create(body: params[:post][:body], user_id: current_user.id, post: @event)
+    redirect_to @event, notice: "New post created."
      #this sould be redirect the main 
   end
 

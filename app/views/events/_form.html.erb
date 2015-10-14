@@ -1,6 +1,6 @@
-<% form_for @post do |f| %>
-	<%= f.label :post %>
-	<%= f.text_area :post %> 
+<%= form_for [@event, @post] do |f| %>
+	<%= f.label :body %>
+	<%= f.text_area :body %> 
 
 	<%= f.submit %>  
 <% end %>
