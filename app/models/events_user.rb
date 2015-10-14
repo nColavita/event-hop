@@ -1,4 +1,4 @@
-class JoinEventsUser < ActiveRecord::Base
+class EventsUser < ActiveRecord::Base
 	belongs_to :event 
 	belongs_to :user
 end

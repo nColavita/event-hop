@@ -2,6 +2,9 @@
 <p>Find me in app/views/places/index.html.erb</p>
 
 
-<%= link_to (image_tag @place.avatar.url(:medium)), new_event_path %>
+<% @places.each do |place| %>
+	<h1><%= place.name %></h1>
+	<%= link_to (image_tag place.avatar.url(:medium)), new_place_event_path(place) %>
+<% end %>
 
-<h1><%= @place.name %></h1>
+

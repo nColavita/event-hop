@@ -12,15 +12,17 @@
 
 	<nav>
 		<ul>
-			<% if current_user %>
+			<% if user_signed_in? %>
 				<%= current_user.email %>
 				<% if current_user[:admin] == true %>
 					<%= link_to 'create new place', new_place_path %> 
 				<% end %>
-			<% end %>
+				<%= link_to 'sign out', destroy_user_session_path, method: :delete %>
+			<% else %>
 			<%= link_to 'sign up', new_user_registration_path %>
 			<%= link_to 'sign in', new_user_session_path %>
-			<%= link_to 'sign out', destroy_user_session_path, method: :delete %>
+
+			<% end %>
 		</ul>
 	</nav>
 

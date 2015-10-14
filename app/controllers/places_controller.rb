@@ -15,7 +15,7 @@ class PlacesController < ApplicationController
   end
 
   def index
-  	@place = Place.find_by(params[:id])
+  	@places = Place.all
   end
 
   def show

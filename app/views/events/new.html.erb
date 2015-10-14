@@ -11,7 +11,7 @@
 <p> <%= @place.website %></p>
 <p> <%= @place.description %> </p>
 
-<%= form_for @event do |f| %>
+<%= form_for [@place, @event] do |f| %>
 
 	<p>
 		<%= f.label :start %>
