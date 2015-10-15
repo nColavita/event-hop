@@ -13,3 +13,156 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+.gmaps {
+ margin-right: 10px;
+ margin-left:300px;
+    
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #EBF7FF;
+	font-family: arial;
+	font-size: 14px;
+	background-color: #13BA45;
+}
+
+
+
+nav {
+	float: right;
+	margin-right: 1em;
+}
+
+.main {
+	padding: 1em;
+	max-width: 450px;
+	margin: 0 auto;
+	margin-top: 57px;
+	background-color: white;
+	border-radius: 15px 15px;
+	font-size: 20px;
+}
+
+
+#post_body {
+	padding: .75em;
+	width: 100%;
+	font-size: 1em;
+}
+
+
+
+
+
+/*header {
+	padding: .5em;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-bottom: 1px solid #CCC;
+	background-color: white;
+	font-size: 20px;
+	font-weight: bold;
+}*/
+
+
+
+
+
+
+
+
+
+
+/*
+a {
+	color: #588AFF;
+	text-decoration: none;
+}
+
+.notice {
+	padding: 1em;
+	border: 1px solid green;
+	background-color: #E9FFBF;
+	border-radius: 12px 12px;
+}
+
+.alert {
+	padding: 1em;
+	border: 1px solid red;
+	background-color: #FFB6AE;
+	border-radius: 12px 12px;
+}
+
+.chirp {
+	border-bottom: 1px solid #EBF7FF;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+
+#post_body {
+	padding: .75em;
+	width: 100%;
+	font-size: 1em;
+}
+
+textarea {
+	border: 1px solid #CCC;
+	margin-top: 0px; 
+}
+
+form label {
+	text-transform: uppercase;
+	font-size: .75em;
+	display: block;
+	margin-bottom: .5em;
+}
+
+
+nav a {
+	padding: 0 .5em;
+	display: inline-block;
+}
+
+
+
+.post {
+	border-width: 1px;
+	border-style:  solid;
+	padding-left: 20px;
+
+}
+
+
+
+/**/
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

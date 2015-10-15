@@ -8,11 +8,14 @@ class EventsController < ApplicationController
   end
 
   def index
+ @posts = Post.last(10).reverse
   end
 
   def show
     @place = @event.place
     @post = Post.new
+   
+    
 
     @hash = Gmaps4rails.build_markers(@place) do |place, marker|
       marker.lat place.latitude
@@ -29,12 +32,18 @@ class EventsController < ApplicationController
     if @event.save
       @emails = params[:event][:email].gsub(" ", "").split(",")
       @emails.each do |email|
-        EventMailer.invitation(current_user, email).deliver
+        EventMailer.invitation(current_user, email, @event).deliver
       end
       redirect_to user_path(current_user.id)
     else
       redirect_to :back, notice: "there was a problem"
     end
+
+
+    
+
+
+
   end
 
 

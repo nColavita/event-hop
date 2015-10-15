@@ -1,10 +1,12 @@
 class EventMailer < ActionMailer::Base
 
-	def invitation(current_user, email)
+	def invitation(current_user, email, event)
+		@event = event
+		@current_user = current_user
 		mail(to: email,
-			from: "services@mydomain.com",
-			subject: "Invitation",
-			body: "You are invited to event name"
+			from: "services@eventhop.com",
+			subject: "Invitation from eventhop"
 		)
 	end
 end
+
