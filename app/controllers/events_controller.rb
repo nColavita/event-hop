@@ -23,7 +23,7 @@ class EventsController < ApplicationController
     if @event.save
       @emails = params[:event][:email].gsub(" ", "").split(",")
       @emails.each do |email|
-        EventMailer.invitation(current_user, email).deliver
+        EventMailer.invitation(current_user, email, @event).deliver
       end
       redirect_to user_path(current_user.id)
     else
