@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
-  before_action :authenticate_user!, only:[:new, :create]
-  before_action :set_event, only: [:show]
+  before_action :authenticate_user!, only:[:new, :create, :join]
+  before_action :set_event, only: [:show, :join]
   before_action :set_place, only: [:create, :new]
 
   def new
@@ -32,11 +32,13 @@ class EventsController < ApplicationController
     if @event.save
       @emails = params[:event][:email].gsub(" ", "").split(",")
       @emails.each do |email|
-        EventMailer.invitation(current_user, email, @event).deliver
+        EventMailer.invitation(current_user, email, @event).deliver_now
+        # .deliver will be deprecated in rails 5
+        # use .deliver_now
       end
       redirect_to user_path(current_user.id)
     else
-      redirect_to :back, notice: "there was a problem"
+      redirect_to :back, notice: "There was a problem creating an invitation. Please try again."
     end
 
 
@@ -46,6 +48,10 @@ class EventsController < ApplicationController
 
   end
 
+  def join
+    @event.users << current_user
+    redirect_to @event, notice: "Added to event."
+  end
 
   private
 

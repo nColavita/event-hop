@@ -14,4 +14,11 @@ class Event < ActiveRecord::Base
 	def add_current_user_to_events_users
 		users << user
 	end
+
+	# clean way
+	# maybe events controller
+
+
+	# ugly way
+	# set @ user, find that user, find the association of that event and the user, redirect to where it used to be
 end

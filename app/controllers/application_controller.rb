@@ -1,18 +1,86 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
-  protect_from_forgery with: :exception
+  	protect_from_forgery with: :exception
+	before_action :store_location
 
-  def after_sign_up_path_for(resources)
-  		'/places'
-  end
-
-	def after_sign_in_path_for(resources)
-		'/places'
+ 	protected
+	def store_location
+		puts "Storing: #{params[:continue]}"
+	    if params[:continue] # =~ /\/(events\/[0-9])\z/ # safelist
+	        puts "it's a match"
+	        session[:continue] = params[:continue]
+	    end
 	end
 
-	# def admin
+	def after_sign_in_path_for(resource)
+	    puts "I found: #{session[:continue]}"
+	    session.delete(:continue) || root_path
+	end
 
+	def after_sign_up_path_for(resources)
+		if params[:destination]
+			@event.users << current_user
+			event_path(params[:destination])
+		else
+			places_path
+		end
+	end
+
+	# after they authenticate, they should be joined to that event
+	# take the :continue event value and join that user
+
+	# def after_sign_in_path_for(resources)
+	# 	puts "*" * 80
+	# 	puts "Params: #{params.inspect}"
+	# 	puts "session: #{session.inspect}"
+	# 	if params[:destination]
+	# 		@event.users << current_user
+	# 		event_path(params[:destination])
+	# 	else
+	# 		places_path
+	# 	end
+	# end
+
+	# def after_sign_up_path_for(resources)
+	# 	if params[:destination]
+	# 		session[:return_to] ||= request.referrer
+	# 		event_path(params[:destination])
+	# 	else
+	# 		places_path
+	# 	end
+	# end
+
+	# def after_sign_in_path_for(resources)
+	# 	if params[:destination]
+	# 		event_path(params[:destination])
+	# 	else
+	# 		places_path
+	# 	end
+	# end
+
+	# def after_sign_up_path_for(resources)
+	# 	if request.format == "text/html" || request.content_type == "text/html"
+ #  			session[:previous_url] = request.fullpath
+ #  		else
+ #  			places_path
+	# 	end
+	# end
+
+	# def after_sign_in_path_for(resource)
+	# 	if request.format == "text/html" || request.content_type == "text/html"
+ #  			session[:previous_url] = request.fullpath
+ #  		else
+ #  			places_path
+	# 	end
+	# end
+
+	# def after_database_authentication
+	#   	if params[:destination]
+	# 		event_path(params[:destination])
+	# 	else
+	# 		places_path
+	# 	end
 	# end
 
 	def authenticate_admin!
