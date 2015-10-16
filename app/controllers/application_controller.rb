@@ -36,62 +36,6 @@ class ApplicationController < ActionController::Base
 	    )
 	  }
 	end
-	# after they authenticate, they should be joined to that event
-	# take the :continue event value and join that user
-
-	# def after_sign_in_path_for(resources)
-	# 	puts "*" * 80
-	# 	puts "Params: #{params.inspect}"
-	# 	puts "session: #{session.inspect}"
-	# 	if params[:destination]
-	# 		@event.users << current_user
-	# 		event_path(params[:destination])
-	# 	else
-	# 		places_path
-	# 	end
-	# end
-
-	# def after_sign_up_path_for(resources)
-	# 	if params[:destination]
-	# 		session[:return_to] ||= request.referrer
-	# 		event_path(params[:destination])
-	# 	else
-	# 		places_path
-	# 	end
-	# end
-
-	# def after_sign_in_path_for(resources)
-	# 	if params[:destination]
-	# 		event_path(params[:destination])
-	# 	else
-	# 		places_path
-	# 	end
-	# end
-
-	# def after_sign_up_path_for(resources)
-	# 	if request.format == "text/html" || request.content_type == "text/html"
- #  			session[:previous_url] = request.fullpath
- #  		else
- #  			places_path
-	# 	end
-	# end
-
-	# def after_sign_in_path_for(resource)
-	# 	if request.format == "text/html" || request.content_type == "text/html"
- #  			session[:previous_url] = request.fullpath
- #  		else
- #  			places_path
-	# 	end
-	# end
-
-	# def after_database_authentication
-	#   	if params[:destination]
-	# 		event_path(params[:destination])
-	# 	else
-	# 		places_path
-	# 	end
-	# end
->>>>>>> master
 
 	def authenticate_admin!
 		unless current_user[params[:admin]] == true
