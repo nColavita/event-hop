@@ -1,14 +1,16 @@
 <h1><%= @user.email%>'s Profile</h1>
 
 <%= link_to 'Update Profile with Personal Info', edit_user_registration_path %>
-<%= image_tag @user.profilepic.url(:medium) %>
 
-<h1>Events Created</h1>
+<% if @user.profilepic? %>
+	<%= image_tag @user.profilepic.url(:medium) %>
+<% end %>
+
+<h1>Events</h1>
 
 <h1>Your Upcoming Events</h1>
 <% @user.events.each do |event| %>
 	<% if Time.now < event.start %>
-		
 		<p><%= event.description %></p>
 		<p><%= event.place.name %></p>
 		<p><%= event.start %></p>
@@ -17,10 +19,13 @@
 	<% end %>
 <% end %>
 
+<h1>Your Attending Events</h1>
+
+
+
 <h1>Your Passed Events</h1>
 <% @user.events.each do |event| %>
 	<% if Time.now > event.start %>
-		
 		<p><%= event.description %></p>
 		<p><%= event.place.name %></p>
 		<p><%= event.start %></p>  

@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
-  before_action :authenticate_user!, only:[:new, :create]
-  before_action :set_event, only: [:show]
+  before_action :authenticate_user!, only:[:new, :create, :join]
+  before_action :set_event, only: [:show, :join]
   before_action :set_place, only: [:create, :new]
 
   def new
@@ -15,8 +15,7 @@ class EventsController < ApplicationController
     @place = @event.place
     @post = Post.new
     
-    
-
+    # gmap below
     @hash = Gmaps4rails.build_markers(@place) do |place, marker|
       marker.lat place.latitude
       marker.lng place.longitude
@@ -47,6 +46,10 @@ class EventsController < ApplicationController
     end 
   end
 
+  def join
+    @event.users << current_user
+    redirect_to @event, notice: "Added to event."
+  end
 
   private
 
