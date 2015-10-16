@@ -48,6 +48,6 @@ Rails.application.configure do
     :password =>       ENV['EVENT_HOP_MANDRILL_APIKEY'],
     :authentication => 'plain',
     :domain => "heroku.com",
-    :enable_starttls_auto => true
+    :enable_starttls_auto => true #if the server accepts it
     }
 end
