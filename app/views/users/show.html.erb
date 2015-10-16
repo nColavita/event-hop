@@ -5,5 +5,35 @@
 <h1>Events Created</h1>
 
 <h1>Your Upcoming Events</h1>
+<% @user.events.each do |event| %>
+	<% if Time.now < event.start %>
+		
+		<p><%= event.description %></p>
+		<p><%= event.place.name %></p>
+		<p><%= event.start %></p>
+		<%= link_to 'See the event', event_path(event) %>
+		<hr>
+	<% end %>
+<% end %>
 
 <h1>Your Passed Events</h1>
+<% @user.events.each do |event| %>
+	<% if Time.now > event.start %>
+		
+		<p><%= event.description %></p>
+		<p><%= event.place.name %></p>
+		<p><%= event.start %></p>  
+		<%= link_to 'See the event', event_path %>
+ 		<hr>
+	<% end %>
+<% end %>
+
+
+
+
+
+
+
+
+
+

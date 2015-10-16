@@ -22,11 +22,13 @@
 					<%= link_to 'create new place', new_place_path %> 
 				<% end %>
 				<%= link_to 'sign out', destroy_user_session_path, method: :delete %>
+				<%=  link_to 'profile', user_path(current_user.id) %>
 			<% else %>
 			<%= link_to 'sign up', new_user_registration_path %>
 			<%= link_to 'sign in', new_user_session_path %>
 
 			<% end %>
+			<%= link_to 'Create a new event', root_path %>
 		</ul>
 	</nav>
 
