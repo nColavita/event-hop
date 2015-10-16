@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
 		devise_parameter_sanitizer.for(:account_update) { |params|
 	    params.permit(
 	      :email, :password, :password_confirmation, :fname,
-	      :lname, :current_password
+	      :lname, :current_password, :profilepic
 	    )
 	  }
 	end
