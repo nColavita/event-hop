@@ -16,8 +16,3 @@
 //= require gmaps/google
 //= require turbolinks
 //= require_tree .
-
-// $("#join").click(function() {
-// 	overlayLink = $(this).attr("join")
-// 	window.startOverlay(overlayLink);
-// });
