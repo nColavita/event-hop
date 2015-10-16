@@ -15,7 +15,7 @@
 
 	<p>
 		<%= f.label :start %>
-		<%= f.datetime_select :start %>
+		<%= f.datetime_select :start, required: true%>
 	</p>
 
 	<p>
@@ -25,7 +25,7 @@
 
 	<p>
 		<%= f.label :email %>
-		<%= f.text_area :email %>
+		<%= f.text_area :email, required: true%>
 	</p>
 
 	<%= f.submit %>
