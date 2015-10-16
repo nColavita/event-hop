@@ -14,7 +14,7 @@ class EventsController < ApplicationController
   def show
     @place = @event.place
     @post = Post.new
-   
+    
     
 
     @hash = Gmaps4rails.build_markers(@place) do |place, marker|

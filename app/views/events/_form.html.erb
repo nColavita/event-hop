@@ -1,13 +1,15 @@
-<div class="main">
-
-<h3>Chat Box</h3>
+<div class="Chatbox"><h3>Chat Box</h3>
 <%= form_for [@event, @post] do |f| %>
 	<%= f.label :body %>
 	<%= f.text_area :body %> 
 
 	<%= f.submit %>  
 <% end %>
+</div>
 
+
+
+<div class="main">
 
 
 <h3> Post </h3>

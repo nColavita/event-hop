@@ -14,7 +14,7 @@
  *= require_self
  */
 
-
+ 
 
 .gmaps {
  margin-right: 10px;
@@ -48,7 +48,28 @@ nav {
 	background-color: white;
 	border-radius: 15px 15px;
 	font-size: 20px;
+	height: 600px;
+	overflow: scroll;
+	border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
 }
+
+.Chatbox {
+	padding: 1em;
+	max-width: 450px;
+	margin: 0 auto;
+	margin-top: 57px;
+	background-color: white;
+	border-radius: 15px 15px;
+	font-size: 20px;
+	margin-bottom: -57px;
+	border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.main .new_post{
+	
+}	
 
 
 #post_body {
