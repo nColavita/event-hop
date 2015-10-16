@@ -1,6 +1,7 @@
 <h1><%= @user.email%>'s Profile</h1>
 
 <%= link_to 'Update Profile with Personal Info', edit_user_registration_path %>
+<%= image_tag @user.profilepic.url(:medium) %>
 
 <h1>Events Created</h1>
 

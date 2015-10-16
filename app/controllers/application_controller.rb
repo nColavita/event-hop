@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   	protect_from_forgery with: :exception
 	before_action :store_location
+  before_filter :configure_permitted_parameters, if: :devise_controller?
 
  	protected
 	def store_location
@@ -27,6 +28,14 @@ class ApplicationController < ActionController::Base
 		end
 	end
 
+	def configure_permitted_parameters
+		devise_parameter_sanitizer.for(:account_update) { |params|
+	    params.permit(
+	      :email, :password, :password_confirmation, :fname,
+	      :lname, :current_password, :profilepic
+	    )
+	  }
+	end
 	# after they authenticate, they should be joined to that event
 	# take the :continue event value and join that user
 
@@ -82,12 +91,12 @@ class ApplicationController < ActionController::Base
 	# 		places_path
 	# 	end
 	# end
+>>>>>>> master
 
 	def authenticate_admin!
 		unless current_user[params[:admin]] == true
 			
 		end
 	end
-
 
 end
