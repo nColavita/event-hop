@@ -1,27 +1,56 @@
 
-<h1 class="eventname"><%= @place.name %></h1>
+<div class="event">
+	<div class="pagetitle">
+		<h1><%= @place.name %></h1>
+	</div>
+
+	<div class="eventdescription">
+		<p><%= @event.description %></p>
+	</div>
+</div>
 
 <% if current_user == nil %>
 	<%= render 'join_eventform' %>
 <% end %>
 
-<p class="animated bounceIn">Description: <%= @place.description %></p>
+<div class="container">
 
-<div  class="gmaps">
-	<div style="width: 600px" center>
-		<div id="map" style="width: 100%; height: 400px"></div>
+	<div class="table">
+		<div class="row">
+			<div class="col-md-4">
+				<h3>People Going!</h3>
+				<% @event.users.each do |user| %>
+					<div class="attending"> <%= user.email %> </div>
+					<hr>
+				<% end %>
+			</div>
+			<div class="col-md-8">
+				<div  class="gmaps">
+					<div style="width: 600px" center>
+						<div id="map" style="width: 100%; height: 400px"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
+
+
+	<div class="table">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+					<!-- Shows all the posts for this event --> 
+					<%= render 'form' %>
+					<!-- Shows all the posts for this event --> 
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+
 </div>
 
-<div class="table">
-	<h3>Users going!</h3>
 
-	<% @event.users.each do |user| %>
-		<%= user.email %>
-		<hr>
-	<% end %>
-</div>
 
-<!-- Shows all the posts for this event --> 
-<%= render 'form' %>
-<!-- Shows all the posts for this event --> 
+
+
+

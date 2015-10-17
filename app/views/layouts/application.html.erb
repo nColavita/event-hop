@@ -32,21 +32,19 @@
 </head>
 <body>
 
-	<nav>
+	<nav class="headernav">
 		<ul>
 			<% if user_signed_in? %>
-				<%= current_user.email %>
+				<b>Welcome Back</b> <%= current_user.email %>
 				<% if current_user[:admin] == true %>
-					<%= link_to 'Create New Place', new_place_path %> 
+				<div class="link"><%= link_to 'Create New Place', new_place_path %> </div>
 				<% end %>
-				<%#= link_to 'Create a New Event', root_path %>
-				<%=  link_to 'profile', user_path(current_user.id) %>
-				<%#= link_to 'update profile', edit_user_registration_path %>
-				<%= link_to 'sign out', destroy_user_session_path, method: :delete %>
-				<%= link_to 'Home', places_path %>
+				<div class="link"><%=  link_to 'profile', user_path(current_user.id) %></div>
+				<div class="link"><%= link_to 'sign out', destroy_user_session_path, method: :delete %></div>
+				<div class="link"><%= link_to 'Home', places_path %></div>
 			<% else %>
-			<%= link_to 'sign up', new_user_registration_path %>
-			<%= link_to 'sign in', new_user_session_path %>
+			<div class="link"><%= link_to 'sign up', new_user_registration_path %></div>
+			<div class="link"><%= link_to 'sign in', new_user_session_path %></div>
 			<% end %>
 		</ul>
 	</nav>
