@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151016214502) do
+ActiveRecord::Schema.define(version: 20151016215159) do
 
   create_table "events", force: :cascade do |t|
     t.integer  "user_id"
@@ -70,6 +70,8 @@ ActiveRecord::Schema.define(version: 20151016214502) do
     t.string   "profilepic_content_type"
     t.integer  "profilepic_file_size"
     t.datetime "profilepic_updated_at"
+    t.string   "fname"
+    t.string   "lname"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

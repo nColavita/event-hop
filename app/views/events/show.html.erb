@@ -1,8 +1,11 @@
-<h1><%= @place.name %></h1>
 
-<%= render 'join_eventform' %>
+<h1 class="eventname"><%= @place.name %></h1>
 
-<p>Description: <%= @place.description %></p>
+<% if current_user == nil %>
+	<%= render 'join_eventform' %>
+<% end %>
+
+<p class="animated bounceIn">Description: <%= @place.description %></p>
 
 <div  class="gmaps">
 	<div style="width: 600px" center>
@@ -10,12 +13,14 @@
 	</div>
 </div>
 
-<h3>Users going!</h3>
+<div class="table">
+	<h3>Users going!</h3>
 
-<% @event.users.each do |user| %>
-	<%= user.email %>
-	<hr>
-<% end %>
+	<% @event.users.each do |user| %>
+		<%= user.email %>
+		<hr>
+	<% end %>
+</div>
 
 <!-- Shows all the posts for this event --> 
 <%= render 'form' %>

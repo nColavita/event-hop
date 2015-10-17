@@ -1,3 +1,22 @@
 // Place all the styles related to the places controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$headerfont: 'Josefin Sans', sans-serif; 
+$taglinefont: 'Helvetica';
+
+.pagetitle{
+	text-align: center;
+	margin-top: 4em;
+	h1{
+		font-size: 4em;
+		font-family: $headerfont;
+	}
+}
+
+.container{
+	margin-top: 5em;
+	p{
+		font-family: $taglinefont;
+		margin-top: .5em;
+	}
+}

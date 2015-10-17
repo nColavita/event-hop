@@ -2,4 +2,47 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$headerfont: 'Josefin Sans', sans-serif; 
+$taglinefont: 'Helvetica';
+
+.col-md-4{
+	text-align: center;
+}
+
+.eventinfo{
+	text-align: center;
+	border: solid black 1px;
+}
+
+.eventform{
+	text-align: center;
+	margin-top: 2em;
+	padding: 1em;
+	width: 100%;
+	border: solid black 1px;
+	// border-radius: 30px;
+}
+
+.form{
+	font-size: 1.3em;
+	border-bottom: solid black 1px;
+	padding: 2em;
+	margin: 1em;
+
+	input[type="text"],
+	textarea {
+		text-align: center;
+		font-size: 1.4em;
+    width: 85%;
+    height: 50%;
+    padding: 0;
+    border: 5px solid #ccc;
+    }
+
+  input[type="submit"] {
+  	background: transparent;
+  	border-radius: 20px;
+  	font-size: 2em;
+  }
+}
 
