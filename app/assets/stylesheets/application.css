@@ -65,6 +65,10 @@
 	margin-right: .8em;
 }
 
+.link:hover{
+	background-color: #82E0DE;
+}
+
 .headernav ul a{
 	color: #FDFFF1;
 	padding: .5em;
