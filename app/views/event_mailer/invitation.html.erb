@@ -1,10 +1,22 @@
-<h2>Hi from Event Hop!</h2>
-<p><%= @current_user.email %> invited you to join a new event at place.name on event.start.</p>
-<p>Click link below to view their event!</p>
-<!-- below is link to URL of the created event -->
-<!-- we added 
-  config.action_mailer.default_url_options = { :host => "localhost: 3000" } to development.rb -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- google font -->
+		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Oleo+Script' rel='stylesheet' type='text/css'>
+		<!-- google font -->
+	</head>
+	<body>
+		<div id="emaillogo">
+			<h1>
+				<span style="color: #CC6699">E</span><span style="color: #669999">V</span><span style="color: #666699">E</span><span style="color: #FF9966">N</span><span style="color: #CC6699">T </span>
+				<span style="color: #669999">H</span><span style="color: #666699">O</span><span style="color: #FF9966">P</span>
+			</h1>
+			<p>Go online to go offline. <br> Get planning.</p>
+		</div>
 
-
-
-<%= link_to 'click here', event_url(@event) %>
+		<h2>Hi from Event Hop!</h2>
+		<p><%= @current_user.email %> invited you to join a new event at <%= @event.place.name %> on <%= @event.start %>.</p>
+		<p>Click link below to view their event!</p>
+		<%= link_to 'click here', event_url(@event) %>
+	</body>
+</html>

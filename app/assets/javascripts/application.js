@@ -16,3 +16,9 @@
 //= require gmaps/google
 //= require turbolinks
 //= require_tree .
+
+
+// jquery + randomized background
+// var images = ['bg-01.jpg', 'bg-02.jpg', 'bg-03.jpg'];
+// $('html').css({'background-image': 'url(images/' + images[Math.floor(Math.random() * images.length)] + ')'});
+
