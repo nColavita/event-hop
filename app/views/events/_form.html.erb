@@ -1,7 +1,12 @@
 <div class="mainchat">
 	<div class="chatheader"></div>
 		<% @event.posts.reverse_each do |post| %>
+		<div class="thumb_pic"><%= image_tag post.user.profilepic.url(:thumb) %></div>
+		<% if post.user.fname %>
+			<p><%= post.user.fname %></p>
+		<% else %>
 			<p> <%= post.user.email %></p>
+		<% end %>
 			<p class="postbody"><%= post.body %></p>
 			<p class="datetime"><%= time_ago_in_words(post.created_at) %> ago</p>
 			<hr class="chatbreak">

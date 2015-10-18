@@ -99,6 +99,24 @@ footer li {
 
 /************* User Profile Page ************/
 
+.container{
+	padding-top: 4em;
+}
+
+.event_info{
+	text-align: right;
+}
+
+.event_title{
+	font-family: 'Josefin Sans';
+	font-size: 4em;
+	margin-left: 12em;
+}
+
+.profilepic{
+	padding: 2em;
+}
+
 /************* User Profile Page ************/
 
 
