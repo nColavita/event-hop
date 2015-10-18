@@ -22,6 +22,30 @@
 	background-color: #13BA45;
 }*/
 
+/******** Sign In/Sign Up **********/
+
+.new_user{
+	padding: 1em;
+}
+
+/******** Sign In/Sign Up **********/
+
+.notice{
+	background-color: #78D95B;
+	height: 40px;
+	font-size: 1.2em; 
+	padding: .5em;
+	color: white;
+}
+
+.alert{
+	background-color: #D92F34;
+	height: 60px;
+	font-size: 1.2em; 
+	padding: 1em;
+	color: white;
+}
+
 .headernav {
 	font-size: 1.2em;
 	background-color: #464749;
@@ -60,7 +84,7 @@
 
 footer{
 	margin-top: 2em;
-	background-color: #CCC;
+	background-color: #F6F6F6;
 	height: 120px;
 	width: 100%;
 }

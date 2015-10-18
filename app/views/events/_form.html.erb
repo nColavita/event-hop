@@ -1,21 +1,20 @@
 <div class="main">
-	<h3> Post </h3>
+	<div class="chatheader"></div>
 		<% @event.posts.reverse_each do |post| %>
 			<p> <%= post.user.email %></p>
 			<p><%= post.body %></p>
 			<p><%= time_ago_in_words(post.created_at) %> ago</p>
 			<hr>
 		<% end %>
-</div>
 
-<div class="chatbox">
-	<h3>Chat Box</h3>
-		<%= form_for [@event, @post] do |f| %>
-		<%= f.label :body %>
-		<%= f.text_area :body %> 
+	<div class="chatbox">
+			<%= form_for [@event, @post] do |f| %>
+			<%= f.label :body %><br>
+			<%= f.text_area :body %><br>
 
-		<%= f.submit %>  
-	<% end %>
+			<%= f.submit %><br>
+		<% end %>
+	</div>
 </div>
 
 
