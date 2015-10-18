@@ -1,6 +1,10 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+
+	has_attached_file :download,
+											:storage => :s3,
+											:s3_credentials => Proc.new{|a| a.instance.s3_credentials}
+
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -8,9 +12,6 @@ class User < ActiveRecord::Base
   has_many :events_users
   has_many :posts
 
- 	has_attached_file :download,
-										:storage => :s3,
-										:s3_credentials => Proc.new{|a| a.instance.s3_credentials}
-
+ 	
   validates_attachment_content_type :profilepic, content_type: /\Aimage\/.*\Z/
 end
