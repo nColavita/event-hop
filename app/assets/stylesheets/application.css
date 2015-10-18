@@ -14,21 +14,7 @@
  *= require_self
  */
 
-
-/*body {
-	background-color: #EBF7FF;
-	font-family: arial;
-	font-size: 14px;
-	background-color: #13BA45;
-}*/
-
-/******** Sign In/Sign Up **********/
-
-.new_user{
-	padding: 1em;
-}
-
-/******** Sign In/Sign Up **********/
+/************* Notices ************/
 
 .notice{
 	background-color: #78D95B;
@@ -46,16 +32,20 @@
 	color: white;
 }
 
+/************* Notices ************/
+
+/************* Nav Bar ************/
+
 .headernav {
 	font-size: 1.2em;
-	background-color: #464749;
+	/*background-color: #464749;*/
 	height: 3.5em;
-
+	border-bottom: solid #EAEAEA 1px; 
 }
 
 .headernav ul{
 	padding: 1em;
-	color: #F3F8FF;
+	color: #7F8286;
 	overflow: hidden;
 }
 
@@ -66,15 +56,23 @@
 	text-decoration: none;
 }
 
-.link:hover{
-	background-color: #848484;
+.link{
+	background-color: #ADADAD;
+	border-radius: 5px;
+	padding: .3em;
 	text-decoration: none;
+	float: right;
+	margin-right: .8em;
 }
 
 .headernav ul a{
-	color: #DFF1FF;
+	color: #FDFFF1;
 	padding: .5em;
 }
+
+/************* Nav Bar ************/
+
+/************* Footer ************/
 
 .footernav {
 	display: inline-block;
@@ -95,3 +93,16 @@ footer li {
 	margin-top: 1.5em;
 	display: inline-block;
 }
+
+/************* Footer ************/
+
+
+/************* User Profile Page ************/
+
+/************* User Profile Page ************/
+
+
+
+
+
+
