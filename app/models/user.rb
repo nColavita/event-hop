@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
   has_many :events_users
   has_many :posts
 
-  has_attached_file :profilepic, styles: { medium: "300x300#", thumb: "100x100#", icon: "35x35#" }, default_url: "/images/:style/missing.jpg"
-  validates_attachment_content_type :profilepic, content_type: /\Aimage\/.*\Z/
+ 	has_attached_file 	
+						:profilepic, styles: { medium: "300x300#{}", thumb: "100x100#{}", icon: "35x35#{}" }, default_url: "/images/:style/missing.png",
+						:download,
+						:storage => :s3,
+						:s3_credentials => Proc.new{|a| a.instance.s3_credentials}
+  	validates_attachment_content_type :profilepic, content_type: /\Aimage\/.*\Z/
 end
