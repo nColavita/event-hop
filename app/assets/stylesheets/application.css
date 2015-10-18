@@ -45,7 +45,7 @@ nav {
 	margin: 0 auto;
 }
 
-#logo {
+/*#logo {
 	width: 250px;
 	height: 236px;
 	float: right;
@@ -53,7 +53,7 @@ nav {
 	margin-right: 15px;
 	text-align: center;
 	position: relative;
-}
+}*/
 
 .places {
 	width: 250px;
@@ -77,7 +77,8 @@ nav {
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-	padding: 2px 0px;
+	padding: 5px 5px;
+	font-size: 1.25em;
 	color: #FFFFFF;
 	background-color: #00476B;
 	text-decoration: none;
