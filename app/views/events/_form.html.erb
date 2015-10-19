@@ -1,32 +1,24 @@
-<div class="Chatbox"><h3>Chat Box</h3>
-<%= form_for [@event, @post] do |f| %>
-	<%= f.label :body %>
-	<%= f.text_area :body %> 
+<div class="mainchat">
+	<div class="chatheader"></div>
+		<div class="comments">
+			<% @event.posts.reverse_each do |post| %>
+			<div class="thumb_pic"><%= image_tag post.user.profilepic.url(:thumb) %></div>
+			<% if post.user.fname %>
+				<p><%= post.user.fname %></p>
+			<% else %>
+				<p> <%= post.user.email %></p>
+			<% end %>
+				<p class="postbody"><%= post.body %></p>
+				<p class="datetime"><%= time_ago_in_words(post.created_at) %> ago</p>
+				<hr class="chatbreak">
+			<% end %>
+		</div>
 
-	<%= f.submit %>  
-<% end %>
+	<div class="chatbox">
+			<%= form_for [@event, @post] do |f| %>
+			<%= f.text_area :body, placeholder: "chat with friends" %><br>
+
+			<%= f.submit %><br>
+		<% end %>
+	</div>
 </div>
-
-
-
-<div class="main">
-
-
-<h3> Post </h3>
-
-<% @event.posts.reverse_each do |post| %>
-	<p> <%= post.user.email %></p>
-	<p><%= post.body %></p>
-
-
-	<p><%= time_ago_in_words(post.created_at) %> ago</p>
-	<hr>
-<% end %>
-
-
-</div>
-
-
-
-
-
