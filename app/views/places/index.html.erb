@@ -1,15 +1,14 @@
-<div id="logo">
-	<h1>
-		<span style="color: #CC6699">E</span><span style="color: #669999">V</span><span style="color: #666699">E</span><span style="color: #FF9966">N</span><span style="color: #CC6699">T </span>
-		<span style="color: #669999">H</span><span style="color: #666699">O</span><span style="color: #FF9966">P</span>
-	</h1>
-	<p>Go online to go offline. <br> Get planning.</p>
-</div>
+<div class="p-wrap">
+	<div class="p-title">
+		<h1>Event Hop</h1>
+		<h2>We make planning events around the city fun!</h2>
+	</div>
 
-<% @places.each do |place| %>
-<div class="places">
-	<h3><%= place.name %></h3>
-	<%= link_to (image_tag place.avatar.url(:medium)), new_place_event_path(place, continue: new_place_event_path(place)) %>
-	<p class="p-description"><%= place.description %></p>
+	<% @places.each do |place| %>
+	<div class="p-places">
+		<h3><%= place.name %></h3>
+		<%= link_to (image_tag place.avatar.url(:medium)), new_place_event_path(place, continue: new_place_event_path(place)) %>
+		<p class="p-description"><%= place.description %></p>
+	</div>
+	<% end %>
 </div>
-<% end %>
