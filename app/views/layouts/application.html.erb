@@ -48,6 +48,15 @@
 				<% end %>
 			</ul>
 		</nav>
+		<div class="countdown">
+            <h3>Time remaining until a new set of places!</h3>
+            <div id="clockdiv">
+                Days: <span class="days"></span><br>
+            Hours: <span class="hours"></span><br>
+            Minutes: <span class="minutes"></span><br>
+            Seconds: <span class="seconds"></span>
+            </div>
+        </div> 
 		
 	<% if notice %>
 		<p class="notice"><%= notice %></p>
@@ -70,28 +79,34 @@
 		</script>
 	<!-- jQuery to handle the created of the map -->
 
+	 <!-- Javascript Function call of the countdown timer -->
+		<script type="text/javascript">
+		    initializeClock(deadline);
+		</script>  
+	<!-- Javascript Function call of the countdown timer --> 
+
 		<footer>
 			<div id="footernav">
 				<br />
 					<ul>
 						<li>
 							<a href="http://www.facebook.com">
-								<img src="app/assets/images/facebook.png">
+								<img src="app/assets/images/facebook.png"/>
 							</a>
 						</li>
 						<li>
 							<a href="http://www.twitter.com">
-								<img src="app/assets/images/twitter.png">
+								<img src="app/assets/images/twitter.png"/>
 							</a>
 						</li>
 						<li>
 							<a href="http://www.instagram.com">
-								<img src="app/assets/images/instagram.png">
+								<img src="app/assets/images/instagram.png"/>
 							</a>
 						</li>
 					</ul>
 			</div>
 		</footer>
-	</body>
 
+	</body>
 </html>
