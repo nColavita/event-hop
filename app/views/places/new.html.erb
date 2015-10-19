@@ -1,38 +1,48 @@
-<h1>Create New Place</h1>
+<div class="pagetitle">
+	<h1>Create a new Place!</h1>
+</div>
 
-<%= form_for @place do |f| %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="eventform">
+				<%= form_for @place do |f| %>
 
-	<p>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
-	</p>
+					<div class="form">
+						<%= f.label :name %>
+						<%= f.text_field :name %>
+					</div>
 
-	<p>
-		<%= f.label :address %>
-		<%= f.text_field :address %>
-	</p>
+					<div class="form">
+						<%= f.label :address %>
+						<%= f.text_field :address %>
+					</div>
 
-	<p>
-		<%= f.label :zipcode %>
-		<%= f.text_field :zipcode %>
-	</p>
+					<div class="form">
+						<%= f.label :zipcode %>
+						<%= f.text_field :zipcode %>
+					</div>
 
-	<p>
-		<%= f.label :website %>
-		<%= f.text_field :website %>
-	</p>
+					<div class="form">
+						<%= f.label :website %>
+						<%= f.text_field :website %>
+					</div>
 
-	<p>
-		<%= f.label :description %>
-		<%= f.text_field :description %>
-	</p>
+					<div class="form">
+						<%= f.label :description %>
+						<%= f.text_field :description %>
+					</div>
 
-	<p>
-		<%= f.label :avatar %>
-		<%= f.file_field :avatar %>
-	</p>
+					<div class="form">
+						<%= f.label :avatar %>
+						<%= f.file_field :avatar %>
+					</div>
 
-	<p>
-		<%= f.submit %>
-	</p>
-<% end %>
+					<div class="form">
+						<%= f.submit %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

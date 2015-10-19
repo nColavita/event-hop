@@ -1,33 +1,48 @@
-<h1>Create a new Event with Event Hop!</h1>
+<div class="pagetitle">
+	<h1>Create a new Event!</h1>
+</div>
 
-<!-- Here should have all the info for the Place Selected -->
-<!-- Place.name -->
-<!-- Place.address -->
-<!-- Place.website -->
+<div class="container">
+	<div class="row">
+		<div class="col-xs-4 col-md-offset-1">
+			<h3>Event Hop Location:</h3>
+		<div class="eventinfo">
+			<h3> <%= @place.name %> </h3>
+			<h4> <%= @place.address %></h4>
+			<h4> <%= @place.website %></h4>
+			<h4> <%= @place.description %> </h4>
+			<br>
+			<h4> <%= image_tag @place.avatar.url(:medium) %> </h4>
+		</div>
+		</div>
 
+		<div class="col-xs-6">
+				<h3>Simply Select a Time and Day to Create the Event</h3>
+				<h3>Include the emails of your friends to send out invites for them to join!</h3>
+			<div class="eventform">
+				<%= form_for [@place, @event] do |f| %>
+				<div class="form">
+					<%= f.label :start, "Event Start Time" %><br>
+					<%= f.datetime_select :start, {:start_year => Date.today.year,:minute_step => 15, :ampm => true} ,required: true%>
+				</div>
 
-<p> <%= @place.name %> </p>
-<p> <%= @place.address %></p>
-<p> <%= @place.website %></p>
-<p> <%= @place.description %> </p>
+				<div class="form">
+					<%= f.label :description, "Describe the Event." %><br>
+					<%= f.text_area :description %>
+				</div>
 
-<%= form_for [@place, @event] do |f| %>
+				<div class="form">
+					<%= f.label :email, "Email Your Friends an Invite!" %><br>
+					<%= f.text_area :email, required: true%>
+				</div>
 
-	<p>
-		<%= f.label :start %>
-		<%= f.datetime_select :start, required: true%>
-	</p>
+				<div class="form">
+					<div class="submitbutton"> <%= f.submit %> </div>
+				</div>
 
-	<p>
-		<%= f.label :description %>
-		<%= f.text_field :description %>
-	</p>
+				<% end %>
+			</div>
+		</div>
 
-	<p>
-		<%= f.label :email %>
-		<%= f.text_area :email, required: true%>
-	</p>
-
-	<%= f.submit %>
-
-<% end %>
+	</div>
+</div>

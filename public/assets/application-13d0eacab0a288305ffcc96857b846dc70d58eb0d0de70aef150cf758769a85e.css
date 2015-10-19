@@ -1,0 +1,493 @@
+/* line 9, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.event {
+  text-align: center;
+}
+
+/* line 13, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.eventdescription {
+  font-size: 1.5em;
+  font-family: "Helvetica";
+}
+
+/* line 18, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.attending {
+  font-size: 1.3em;
+  margin-top: 1em;
+}
+
+/* line 23, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.thumb_pic {
+  padding: 1em;
+  padding-right: 0;
+  display: inline-block;
+}
+
+/* line 29, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.mainchat {
+  max-width: 70%;
+  margin: 1em 5em 0 20%;
+  padding: 0;
+  background-color: #FBFAFC;
+  box-shadow: 5px 5px 2px #D9D9D9;
+}
+/* line 36, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.mainchat .chatheader {
+  height: 35px;
+  width: 100%;
+  background-color: #99AFEE;
+}
+/* line 42, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.mainchat .comments {
+  padding: .3em;
+  overflow: scroll;
+  max-height: 450px;
+  max-width: 100%;
+}
+/* line 50, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.mainchat p {
+  display: inline-block;
+  margin: 0;
+  margin-left: 1em;
+  font-size: 1.3em;
+}
+/* line 57, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.mainchat .datetime {
+  float: right;
+  margin-right: 1em;
+}
+/* line 62, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.mainchat .chatbreak {
+  margin: 1em;
+  border-color: #D8D8D8;
+}
+/* line 67, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.mainchat .postbody {
+  color: black;
+}
+/* line 71, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.mainchat .chatbox {
+  text-align: center;
+  padding: 1em;
+  max-width: 100%;
+  max-height: 200px;
+  margin: 0 auto;
+  background-color: #FBFAFC;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: 1em;
+}
+/* line 82, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.mainchat .chatbox #post_body {
+  resize: none;
+  font-size: 2em;
+  text-align: center;
+}
+/* line 88, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.mainchat .chatbox input[type=submit] {
+  border: 1px solid #336699;
+  color: #ffffff;
+  background: #336699;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+
+/* line 103, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.col-md-4 {
+  text-align: center;
+}
+
+/* line 107, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.eventinfo {
+  text-align: center;
+  border: solid black 1px;
+}
+
+/* line 112, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.eventform {
+  text-align: center;
+  margin-top: 2em;
+  padding: 1em;
+  width: 100%;
+  border: solid black 1px;
+}
+
+/* line 121, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.form {
+  font-size: 1.3em;
+  border-bottom: solid black 1px;
+  padding: 2em;
+  margin: 1em;
+}
+/* line 127, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.form input[type="text"],
+.form textarea {
+  text-align: center;
+  font-size: 1.4em;
+  width: 85%;
+  height: 50%;
+  padding: 0;
+  border: 5px solid #ccc;
+}
+/* line 137, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/events.scss */
+.form input[type="submit"] {
+  background: transparent;
+  border-radius: 20px;
+  font-size: 2em;
+}
+/************* Notices ************/
+/* line 6, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/main.scss */
+.notice {
+  background-color: #78D95B;
+  height: 40px;
+  font-size: 1.2em;
+  padding: .5em;
+  color: white;
+}
+
+/* line 14, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/main.scss */
+.alert {
+  background-color: #D92F34;
+  height: 60px;
+  font-size: 1.2em;
+  padding: 1em;
+  color: white;
+}
+
+/************* Notices ************/
+/************* Nav Bar ************/
+/* line 26, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/main.scss */
+.headernav {
+  font-size: 1.2em;
+  /*background-color: #464749;*/
+  height: 3.5em;
+  border-bottom: solid #EAEAEA 1px;
+}
+
+/* line 33, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/main.scss */
+.headernav ul {
+  padding: 1em;
+  color: #7F8286;
+  overflow: hidden;
+}
+
+/* line 39, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/main.scss */
+.link {
+  display: inline-block;
+  height: 100%;
+  /*margin: 0 .3em 0 .3em;*/
+  text-decoration: none;
+}
+
+/* line 46, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/main.scss */
+.link {
+  background-color: #ADADAD;
+  border-radius: 5px;
+  padding: .3em;
+  text-decoration: none;
+  float: right;
+  margin-right: .8em;
+}
+
+/* line 55, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/main.scss */
+.link:hover {
+  background-color: #82E0DE;
+}
+
+/* line 59, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/main.scss */
+.headernav ul a {
+  color: #FDFFF1;
+  padding: .5em;
+}
+
+/************* Nav Bar ************/
+/************* Footer ************/
+/* line 68, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/main.scss */
+.footernav {
+  display: inline-block;
+  margin-left: 15%;
+  font-size: 1.3em;
+}
+
+/* line 74, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/main.scss */
+footer {
+  margin-top: 2em;
+  background-color: #F6F6F6;
+  height: 120px;
+  width: 100%;
+}
+
+/* line 81, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/main.scss */
+footer li {
+  margin-right: 1em;
+  font-size: 1.5em;
+  margin-top: 1.5em;
+  display: inline-block;
+}
+
+/************* Footer ************/
+/************* User Profile Page ************/
+/* line 93, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/main.scss */
+.container {
+  padding-top: 4em;
+}
+
+/* line 97, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/main.scss */
+.event_info {
+  text-align: right;
+}
+
+/* line 101, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/main.scss */
+.event_title {
+  font-family: 'Josefin Sans';
+  font-size: 4em;
+  margin-left: 12em;
+}
+
+/* line 107, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/main.scss */
+.profilepic {
+  padding: 2em;
+}
+
+/************* User Profile Page ************/
+/* line 113, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/main.scss */
+.signuplogin {
+  border: 1px black solid;
+  width: 250px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* line 120, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/main.scss */
+.signuplogin input[type=submit] {
+  border: 1px solid #336699;
+  color: #ffffff;
+  background: #336699;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+
+/* line 128, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/main.scss */
+.signuplogin input[type=submit]:hover {
+  background: #00476B;
+}
+
+/* line 132, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/main.scss */
+.deviseforms {
+  border: 1px solid black;
+  width: 100%;
+  height: 530px;
+}
+/* line 10, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/places.scss */
+.p-wrap {
+  background-color: #A9A9A9;
+  width: 815px;
+  height: 940px;
+  margin: 0 auto;
+}
+/* line 15, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/places.scss */
+.p-wrap .p-title {
+  text-align: center;
+  padding: 0;
+}
+/* line 18, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/places.scss */
+.p-wrap .p-title h1 {
+  font-size: 3.5em;
+  font-family: "Oleo Script", cursive;
+  padding: 0px;
+}
+
+/* line 26, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/places.scss */
+.p-places {
+  width: 252px;
+  height: 251px;
+  float: left;
+  margin-left: 15px;
+  margin-top: 15px;
+  text-align: center;
+  position: relative;
+}
+/* line 34, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/places.scss */
+.p-places h3 {
+  font-size: 1.25em;
+  font-family: "Oleo Script", cursive;
+  padding: 0;
+}
+/* line 39, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/places.scss */
+.p-places img {
+  display: block;
+  width: 250px;
+  height: 200px;
+}
+/* line 44, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/places.scss */
+.p-places .p-description {
+  opacity: 0;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 5px 5px;
+  font-size: 1.25em;
+  color: #FFFFFF;
+  background-color: #00476B;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 500ms;
+}
+
+/* line 60, /Users/Leah/Documents/wdi/final-group/event-hop/app/assets/stylesheets/places.scss */
+.p-places:hover .p-description {
+  visibility: visible;
+  opacity: 0.8;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+
+/************* Notices ************/
+
+
+.notice{
+	background-color: #78D95B;
+	height: 40px;
+	font-size: 1.2em; 
+	padding: .5em;
+	color: white;
+}
+
+.alert{
+	background-color: #D92F34;
+	height: 60px;
+	font-size: 1.2em; 
+	padding: 1em;
+	color: white;
+}
+
+/************* Notices ************/
+
+/************* Nav Bar ************/
+
+.headernav {
+	font-size: 1.2em;
+	/*background-color: #464749;*/
+	height: 3.5em;
+	border-bottom: solid #EAEAEA 1px; 
+}
+
+.headernav ul{
+	padding: 1em;
+	color: #7F8286;
+	overflow: hidden;
+}
+
+.link{
+	display: inline-block;
+	height: 100%;
+	/*margin: 0 .3em 0 .3em;*/
+	text-decoration: none;
+}
+
+.link{
+	background-color: #ADADAD;
+	border-radius: 5px;
+	padding: .3em;
+	text-decoration: none;
+	float: right;
+	margin-right: .8em;
+}
+
+.link:hover{
+	background-color: #82E0DE;
+}
+
+.headernav ul a{
+	color: #FDFFF1;
+	padding: .5em;
+}
+
+/************* Nav Bar ************/
+
+/************* Footer ************/
+
+.footernav {
+	display: inline-block;
+	margin-left: 15%;
+	font-size: 1.3em;
+}
+
+footer{
+	margin-top: 2em;
+	background-color: #F6F6F6;
+	height: 120px;
+	width: 100%;
+}
+
+footer li {
+	margin-right: 1em;
+	font-size: 1.5em;
+	margin-top: 1.5em;
+	display: inline-block;
+}
+
+/************* Footer ************/
+
+
+/************* User Profile Page ************/
+
+.container{
+	padding-top: 4em;
+}
+
+.event_info{
+	text-align: right;
+}
+
+.event_title{
+	font-family: 'Josefin Sans';
+	font-size: 4em;
+	margin-left: 12em;
+}
+
+.profilepic{
+	padding: 2em;
+}
+
+/************* User Profile Page ************/
+
+.signuplogin {
+	border: 1px black solid;
+	width: 250px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.signuplogin input[type=submit] {
+    border: 1px solid #336699;
+    color: #ffffff;
+    background: #336699;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+.signuplogin input[type=submit]:hover {
+    background: #00476B;
+}
+
+.deviseforms {
+	border: 1px solid black;
+	width: 100%;
+	height: 530px;
+}

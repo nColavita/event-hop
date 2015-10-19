@@ -1,45 +1,45 @@
-<h1><%= @user.email%>'s Profile</h1>
+<div class="container">
 
-<%= link_to 'Update Profile with Personal Info', edit_user_registration_path %>
+	<div class="table">
+		<div class="row">
 
-<% if @user.profilepic? %>
-	<%= image_tag @user.profilepic.url(:medium) %>
-<% end %>
+			<div class="col-md-4 col-md-offset-2">
+				<h2><%= @user.email%>'s Profile</h2>
+				<% if @user.profilepic? %>
+					<div class="profilepic"> <%= image_tag @user.profilepic.url(:medium) %></div><br>
+				<% end %>
 
-<h1>Events</h1>
+				<%= link_to 'Update Profile with Personal Info', edit_user_registration_path %>
+			</div>	<!-- column -->
 
-<h1>Your Upcoming Events</h1>
-<% @user.events.each do |event| %>
-	<% if Time.now < event.start %>
-		<p><%= event.description %></p>
-		<p><%= event.place.name %></p>
-		<p><%= event.start %></p>
-		<%= link_to 'See the event', event_path(event) %>
-		<hr>
-	<% end %>
-<% end %>
+			<div class="col-md-4 event_info">
+				<h1 class="event_title">Events</h1>
+					<h2>Your Upcoming Events</h2>
+					<% @user.events.each do |event| %>
+						<% if Time.now < event.start %>
+							<p><%= event.description %></p>
+							<p><%= event.place.name %></p>
+							<p><%= event.start %></p>
+							<%= link_to 'See the event', event_path(event) %>
+							<hr>
+						<% end %>
+					<% end %>
 
-<h1>Your Attending Events</h1>
+					<h1>Attending Events</h1>
+					<!-- Logic here for Attending Events not Created -->
+					<h1>Your Passed Events</h1>
+					<% @user.events.each do |event| %>
+						<% if Time.now > event.start %>
+							<p><%= event.description %></p>
+							<p><%= event.place.name %></p>
+							<p><%= event.start %></p>  
+							<%= link_to 'See the event', event_path %>
+					 		<hr>
+						<% end %>
+					<% end %>
+			</div><!-- column -->	
+		
+		</div><!-- row -->	
+	</div><!-- table -->
 
-
-
-<h1>Your Passed Events</h1>
-<% @user.events.each do |event| %>
-	<% if Time.now > event.start %>
-		<p><%= event.description %></p>
-		<p><%= event.place.name %></p>
-		<p><%= event.start %></p>  
-		<%= link_to 'See the event', event_path %>
- 		<hr>
-	<% end %>
-<% end %>
-
-
-
-
-
-
-
-
-
-
+</div> <!-- container -->
