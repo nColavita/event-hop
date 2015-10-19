@@ -17,14 +17,12 @@
 //= require turbolinks
 //= require_tree .
 
-console.log("Working!")
-
     //------ Countdown Clock -------//
 
 
     var deadline = 'October 24 2015 23:59:59 GMT-04:00';
 
-    function getTimeRemaining(endtime){
+  function getTimeRemaining(endtime){
 
   var t = Date.parse(endtime) - Date.parse(new Date());
   var seconds = Math.floor( (t/1000) % 60 );
@@ -49,14 +47,14 @@ console.log("Working!")
           var t = getTimeRemaining(endtime);
 
           var daysSpan = clock.querySelector('.days');
-            var hoursSpan = clock.querySelector('.hours');
-            var minutesSpan = clock.querySelector('.minutes');
-            var secondsSpan = ('0' + t.seconds).slice(-2);
+          var hoursSpan = clock.querySelector('.hours');
+          var minutesSpan = clock.querySelector('.minutes');
+          var secondsSpan = ('0' + t.seconds).slice(-2);
 
-          clock.innerHTML = 'days: ' + t.days + '<br>' +
-                            'hours: '+ t.hours + '<br>' +
-                            'minutes: ' + t.minutes + '<br>' +
-                            'seconds: ' + t.seconds;
+          clock.innerHTML = ' Days: ' + t.days + 
+                            ' Hours: '+ t.hours + 
+                            ' Minutes: ' + t.minutes +
+                            ' Seconds: ' + t.seconds;
           if(t.total<=0){
             clearInterval(timeinterval);
           }

@@ -35,12 +35,14 @@
 		<nav class="headernav">
 			<ul>
 				<% if user_signed_in? %>
-					<b>Welcome Back</b> <%= current_user.email %>
+					<% if current_user.fname %>
+					<b>Welcome Back</b> <%= current_user.fname + " " + current_user.email %>
+					<% end %>
 					<% if current_user[:admin] == true %>
 					<div class="link"><%= link_to 'Create New Place', new_place_path %> </div>
 					<% end %>
-					<div class="link"><%=  link_to 'profile', user_path(current_user.id) %></div>
 					<div class="link"><%= link_to 'sign out', destroy_user_session_path, method: :delete %></div>
+					<div class="link"><%=  link_to 'profile', user_path(current_user.id) %></div>
 					<div class="link"><%= link_to 'Home', places_path %></div>
 				<% else %>
 				<div class="link"><%= link_to 'sign up', new_user_registration_path %></div>
@@ -48,22 +50,23 @@
 				<% end %>
 			</ul>
 		</nav>
-		<div class="countdown">
-            <h3>Time remaining until a new set of places!</h3>
-            <div id="clockdiv">
-                Days: <span class="days"></span><br>
-            Hours: <span class="hours"></span><br>
-            Minutes: <span class="minutes"></span><br>
-            Seconds: <span class="seconds"></span>
-            </div>
-        </div> 
-		
+
 	<% if notice %>
 		<p class="notice"><%= notice %></p>
 	<% end %>
 	<% if alert %>
 		<p class="alert"><%= alert %></p>
 	<% end %>
+
+		<div class="countdown">
+      <h3>Time Remaining Until We Change the Places!</h3>
+      <div id="clockdiv">
+         	Days: <span class="days"></span>
+      		Hours: <span class="hours"></span>
+      		Minutes: <span class="minutes"></span>
+      		Seconds: <span class="seconds"></span>
+      </div>
+    </div> 
 
 	<%= yield %>
 	<!-- jQuery to handle the created of the map -->
