@@ -167,3 +167,23 @@ footer{
     background: #00476B;
 }
 
+/*************** Devise Forms  **************/
+
+
+/*************** Countdown Clock  **************/
+
+.countdown{
+	padding: 1em;
+	margin-left: 65%;
+}
+
+#clockdiv {
+	font-size: 1.5em;
+	font-style: oblique;
+}
+
+/*************** Countdown Clock  **************/
+
+
+
+
