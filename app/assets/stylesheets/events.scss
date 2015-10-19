@@ -59,6 +59,12 @@ $taglinefont: 'Helvetica';
 		color: black;
 	}
 
+	.comments{
+		max-height: 450px;
+		max-width: 100%;
+		overflow: scroll; 
+	}
+
 	.chatbox {
 	text-align: center;
 	padding: 1em;
