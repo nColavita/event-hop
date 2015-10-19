@@ -39,14 +39,14 @@
 					<b>Welcome Back</b> <%= current_user.fname + " " + current_user.email %>
 					<% end %>
 					<% if current_user[:admin] == true %>
-					<div class="link"><%= link_to 'Create New Place', new_place_path %> </div>
+					<div class="link"><%= link_to 'create new place', new_place_path %> </div>
 					<% end %>
 					<div class="link"><%= link_to 'sign out', destroy_user_session_path, method: :delete %></div>
 					<div class="link"><%=  link_to 'profile', user_path(current_user.id) %></div>
-					<div class="link"><%= link_to 'Home', places_path %></div>
+					<div class="link"><%= link_to 'home', places_path %></div>
 				<% else %>
 				<div class="link"><%= link_to 'sign up', new_user_registration_path %></div>
-				<div class="link"><%= link_to 'sign in', new_user_session_path %></div>
+				<div class="link"><%= link_to 'log in', new_user_session_path %></div>
 				<% end %>
 			</ul>
 		</nav>
@@ -58,6 +58,7 @@
 		<p class="alert"><%= alert %></p>
 	<% end %>
 
+	<% if controller_name == 'places' && controller_action = 'index' %>
 		<div class="countdown">
       <h3>Time Remaining Until We Change the Places!</h3>
       <div id="clockdiv">
@@ -67,6 +68,7 @@
       		Seconds: <span class="seconds"></span>
       </div>
     </div> 
+    <% end %>
 
 	<%= yield %>
 	<!-- jQuery to handle the created of the map -->
@@ -83,6 +85,7 @@
 	<!-- jQuery to handle the created of the map -->
 
 	 <!-- Javascript Function call of the countdown timer -->
+
 		<script type="text/javascript">
 		    initializeClock(deadline);
 		</script>  

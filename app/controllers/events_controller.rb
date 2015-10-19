@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!, only:[:new, :create, :join]
-  before_action :set_event, only: [:show, :join]
+  before_action :set_event, only: [:show, :join, :leave]
   before_action :set_place, only: [:create, :new]
 
   def new
@@ -49,6 +49,11 @@ class EventsController < ApplicationController
   def join
     @event.users << current_user
     redirect_to @event, notice: "Added to event."
+  end
+
+  def leave
+   @event.users.delete(current_user)
+   redirect_to @event, notice: "Removed from event."
   end
 
   private

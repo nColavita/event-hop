@@ -9,7 +9,7 @@
 </div>
 
 
-		<%= render 'join_eventform' %>
+		
 
 
 <div class="container">
@@ -22,7 +22,9 @@
 					<div class="attending"> <%= user.email %> </div>
 					<hr>
 				<% end %>
+				<%= render 'join_eventform' %>
 			</div>
+			
 			<div class="col-md-8">
 				<div  class="gmaps">
 					<div style="width: 600px" center>
@@ -32,14 +34,20 @@
 			</div>
 		</div>
 	</div>
+</div>
 
-
+<div class="container">
 	<div class="table">
 		<div class="row">
-					<!-- Shows all the posts for this event --> 
-					<%= render 'form' %>
-					<!-- Shows all the posts for this event --> 
-			</div>
+			<div class="col-md-1"></div>
+		<!-- Shows all the posts for this event --> 
+		<div class="col-md-10">
+			<%= render 'form' %>
+		</div>
+		<!-- Shows all the posts for this event --> 
+		</div>
 	</div>
-
 </div>
+
+
+
