@@ -5,6 +5,10 @@
 
 			<div class="col-md-4 col-md-offset-2">
 				<h2><%= @user.email%>'s Profile</h2>
+				<% if @user.fname && @user.lname %>
+					<%= @user.fname + " " + @user.lname%>
+				<% end %>
+
 				<% if @user.profilepic? %>
 					<div class="profilepic"> <%= image_tag @user.profilepic.url(:medium) %></div><br>
 				<% end %>
@@ -27,6 +31,14 @@
 
 					<h1>Attending Events</h1>
 					<!-- Logic here for Attending Events not Created -->
+   				<% @joined_events.each  do |event| %>
+            <p><%= event.description %></p>
+            <p><%= event.place.name %></p>
+            <p><%= event.start %></p>
+            <%= link_to 'See the event', event_path(event) %>
+            <hr>
+          <% end %>
+					
 					<h1>Your Passed Events</h1>
 					<% @user.events.each do |event| %>
 						<% if Time.now > event.start %>

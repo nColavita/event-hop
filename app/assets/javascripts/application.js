@@ -17,10 +17,10 @@
 //= require turbolinks
 //= require_tree .
 
-    //------ Countdown Clock -------//
+//------ Countdown Clock -------//
 
 
-    var deadline = 'October 24 2015 23:59:59 GMT-04:00';
+  var deadline = 'October 24 2015 23:59:59 GMT-04:00';
 
   function getTimeRemaining(endtime){
 
@@ -30,41 +30,41 @@
   var hours = Math.floor( (t/(1000*60*60)) % 24 );
   var days = Math.floor( t/(1000*60*60*24) );
       
-      return {
-        'total': t,
-        'days': days,
-        'hours': hours,
-        'minutes': minutes,
-        'seconds': seconds
-      };
-    }
+    return {
+      'total': t,
+      'days': days,
+      'hours': hours,
+      'minutes': minutes,
+      'seconds': seconds
+    };
+  }
 
-    //------ Displaying the Clock in HTML/CSS -------//
+  //------ Displaying the Clock in HTML/CSS -------//
 
-    function initializeClock(endtime){
-      var clock = document.getElementById('clockdiv');
-      function updateClock(){
-          var t = getTimeRemaining(endtime);
+  function initializeClock(endtime){
+    var clock = document.getElementById('clockdiv');
+    function updateClock(){
+        var t = getTimeRemaining(endtime);
 
-          var daysSpan = clock.querySelector('.days');
-          var hoursSpan = clock.querySelector('.hours');
-          var minutesSpan = clock.querySelector('.minutes');
-          var secondsSpan = ('0' + t.seconds).slice(-2);
+        var daysSpan = clock.querySelector('.days');
+        var hoursSpan = clock.querySelector('.hours');
+        var minutesSpan = clock.querySelector('.minutes');
+        var secondsSpan = ('0' + t.seconds).slice(-2);
 
-          clock.innerHTML = ' Days: ' + t.days + 
-                            ' Hours: '+ t.hours + 
-                            ' Minutes: ' + t.minutes +
-                            ' Seconds: ' + t.seconds;
-          if(t.total<=0){
-            clearInterval(timeinterval);
-          }
+        clock.innerHTML = 'Days: ' + t.days + 
+                          ' | Hours: '+ t.hours + 
+                          ' | Minutes: ' + t.minutes +
+                          ' | Seconds: ' + t.seconds;
+        if(t.total<=0){
+          clearInterval(timeinterval);
         }
+      }
 
-        updateClock(); // run function once at first to avoid delay
-        var timeinterval = setInterval(updateClock,1000);
-    }
+      updateClock(); // run function once at first to avoid delay
+      var timeinterval = setInterval(updateClock,1000);
+  }
 
-        //------ Displaying the Clock in HTML/CSS -------//
+  //------ Displaying the Clock in HTML/CSS -------//
 
-    //------ Countdown Clock -------//
+//------ Countdown Clock -------//
  

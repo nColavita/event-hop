@@ -20,6 +20,11 @@ body {
 	color: #00476B;
 }
 
+#footernav {
+	width: 400px;
+	margin: 0 auto;
+}
+
 /************* Notices ************/
 
 .notice{
@@ -36,6 +41,21 @@ body {
 	font-size: 1.25em; 
 	padding: .5em;
 	color: white;
+}
+
+.joinleave{
+	font-size: 1.5em;
+	/*margin-left: 20%;*/
+	font-family: 'Arial';
+}
+
+.joinleave a{
+	color: #1FE023;
+}
+
+#join a{
+	font-size: 1.5em;
+	color: #1FE023;
 }
 
 /************* Notices ************/
@@ -148,25 +168,67 @@ footer{
 	text-align: center;
 }
 
+/************* Devise Forms ***************/
+
 #user_profilepic {
-	border: 1px #CACACA solid;
-	background-color: #ffffff;
-    margin: 0 auto;
-    padding-bottom: 2px;
+	background-color: #FFFFFF;
+	margin: 0 auto;
+    text-align: center;
+	font-size: 1.4em;
+    width: 85%;
+    height: 50%;
+    padding: 0;
+    border: 5px solid #ccc;
 }
+
+#user_fname {
+	text-align: center;
+	font-size: 1.4em;
+    width: 85%;
+    height: 50%;
+    padding: 0;
+    border: 5px solid #ccc;
+}
+#user_lname {
+	text-align: center;
+	font-size: 1.4em;
+    width: 85%;
+    height: 50%;
+    padding: 0;
+    border: 5px solid #ccc;
+}
+#user_email {
+	text-align: center;
+	font-size: 1.4em;
+    width: 85%;
+    height: 50%;
+    padding: 0;
+    border: 5px solid #ccc;
+}
+#user_password {
+	text-align: center;
+	font-size: 1.4em;
+    width: 85%;
+    height: 50%;
+    padding: 0;
+    border: 5px solid #ccc;
+}
+#user_password_confirmation {
+	text-align: center;
+	font-size: 1.4em;
+    width: 85%;
+    height: 50%;
+    padding: 0;
+    border: 5px solid #ccc;
+}
+
+/************* Devise Forms ***************/
 
 .signuplogin input[type=submit] {
-    border: 1px solid #336699;
-    color: #ffffff;
-    background: #336699;
-    padding: 10px 20px;
-    border-radius: 3px;
+    background: transparent;
+  	border-radius: 20px;
+  	font-size: 2em;
 }
-
-.signuplogin input[type=submit]:hover {
-    background: #00476B;
-}
-
 /*************** Devise Forms  **************/
 
 

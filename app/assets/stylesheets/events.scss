@@ -27,8 +27,7 @@ $taglinefont: 'Helvetica';
 }
 
 .mainchat{
-	max-width: 70%;
-	margin: 1em 5em 0 20%;
+	// margin: 1em 5em 0 20%;
 	padding: 0;
 	background-color: #FBFAFC;	
 	box-shadow: 5px 5px 2px #D9D9D9;
@@ -39,14 +38,6 @@ $taglinefont: 'Helvetica';
 		background-color: #99AFEE;
 	}
 
-	.comments {
-		// border: solid black 1px;
-		padding: .3em;
-		overflow: scroll;
-		max-height: 450px;
-		max-width: 100%;
-	}
-
 	p {
 		display: inline-block;
 		margin: 0;
@@ -55,7 +46,7 @@ $taglinefont: 'Helvetica';
 	}
 
 	.datetime{
-		float: right;
+		// float: right;
 		margin-right: 1em;
 	}
 
@@ -66,6 +57,12 @@ $taglinefont: 'Helvetica';
 
 	.postbody{
 		color: black;
+	}
+
+	.comments{
+		max-height: 450px;
+		max-width: 100%;
+		overflow: scroll; 
 	}
 
 	.chatbox {
@@ -91,6 +88,10 @@ $taglinefont: 'Helvetica';
 	    background: #336699;
 	    padding: 10px 20px;
 	    border-radius: 3px;
+	  }
+
+	  textarea{
+	  	width: 60%;
 	  }
 	}
 }
