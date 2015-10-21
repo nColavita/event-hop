@@ -29,6 +29,7 @@ gem 'mandrill-api', require: "mandrill"
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'underscore-rails'
+gem 'passenger'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
