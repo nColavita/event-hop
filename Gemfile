@@ -31,6 +31,7 @@ gem 'geocoder'
 gem 'gmaps4rails'
 gem 'underscore-rails'
 gem 'passenger'
+gem 'bootstrap-sass', '~> 3.3.5'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

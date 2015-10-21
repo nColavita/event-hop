@@ -14,6 +14,9 @@
  *= require_self
  */
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 body {
 	background-color: #F7F7F7;
 	font-family: 'Josefin Sans', sans-serif;
