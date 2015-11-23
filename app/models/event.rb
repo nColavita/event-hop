@@ -8,7 +8,7 @@ class Event < ActiveRecord::Base
 	has_many :events_users
 	has_many :users, through: :events_users
 	after_create :add_current_user_to_events_users
-	has_attached_file :photo
+	# has_attached_file :photo
 	
 
 	# validates_presence_of :email, :start
