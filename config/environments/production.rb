@@ -77,22 +77,23 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-
-
-
-  config.action_mailer.default_url_options = { :host => "http://leah-eventhop.herokuapp.com" }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.smtp_settings = {
-    :port =>           587,
-    :address =>        'smtp.mandrillapp.com',
-    :user_name =>      ENV['EVENT_HOP_MANDRILL_USERNAME'],
-    :password =>       ENV['EVENT_HOP_MANDRILL_APIKEY'],
-    :authentication => :plain,
-    :domain => "heroku.com",
-    :enable_starttls_auto => true
-    }
+  config.action_mailer.default_url_options = { :host => 'leah-eventhop.herokuapp.com' }
+    Rails.application.routes.default_url_options[:host] = 'leah-eventhop.herokuapp.com'
+      config.action_mailer.delivery_method = :smtp
+      config.action_mailer.perform_deliveries = true
+      config.action_mailer.raise_delivery_errors = false
+      config.action_mailer.default :charset => "utf-8"
+      config.action_mailer.smtp_settings = {
+          :port => '587',
+          :address => 'smtp.mandrillapp.com',
+          :user_name => ENV['EVENT_HOP_MANDRILL_USERNAME'],
+          :password => ENV['EVENT_HOP_MANDRILL_APIKEY'],
+          :domain => 'heroku.com',
+          :authentication => :plain
+  }
+  ActionMailer::Base.delivery_method = :smtp
+  config.action_controller.include_all_helpers = true
+  ActionMailer::Base.default :from => "MyApp<myapp@thisisyouremailaddress.com>"
 
 
   config.serve_static_assets = true
