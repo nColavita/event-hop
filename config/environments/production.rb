@@ -87,7 +87,7 @@ Rails.application.configure do
     :user_name =>      ENV['EVENT_HOP_MANDRILL_USERNAME'],
     :password =>       ENV['EVENT_HOP_MANDRILL_APIKEY'],
     :authentication => :plain,
-    :domain => "heroku.com",
+    :domain => "http://leah-eventhop.heroku.com",
     :enable_starttls_auto => true
     }
 
