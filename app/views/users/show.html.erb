@@ -22,7 +22,7 @@
 					<% @user.events.each do |event| %>
 						<% if Time.now < event.start %>
 							<p><%= event.description %></p>
-							<p><%= event.place.name %></p>
+							<p><%# event.place.name %></p>
 							<p><%= event.start %></p>
 							<%= link_to 'See the event', event_path(event) %>
 							<hr>
@@ -33,7 +33,7 @@
 					<!-- Logic here for Attending Events not Created -->
    				<% @joined_events.each  do |event| %>
             <p><%= event.description %></p>
-            <p><%= event.place.name %></p>
+            <p><%# event.place.name %></p>
             <p><%= event.start %></p>
             <%= link_to 'See the event', event_path(event) %>
             <hr>
@@ -43,7 +43,7 @@
 					<% @user.events.each do |event| %>
 						<% if Time.now > event.start %>
 							<p><%= event.description %></p>
-							<p><%= event.place.name %></p>
+							<p><%# event.place.name %></p>
 							<p><%= event.start %></p>  
 							<%= link_to 'See the event', event_path %>
 					 		<hr>
