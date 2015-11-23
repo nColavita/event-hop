@@ -24,7 +24,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 gem "paperclip", "~> 4.3"
-gem 'mandrill-api', require: "mandrill"
+gem 'mandrill-api'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'underscore-rails'
