@@ -19,8 +19,6 @@
 //= require_tree .
 
 //------ Countdown Clock -------//
-
-
   var deadline = 'October 24 2015 23:59:59 GMT-04:00';
 
   function getTimeRemaining(endtime){
@@ -41,7 +39,6 @@
   }
 
   //------ Displaying the Clock in HTML/CSS -------//
-
   function initializeClock(endtime){
     var clock = document.getElementById('clockdiv');
     function updateClock(){
@@ -64,8 +61,6 @@
       updateClock(); // run function once at first to avoid delay
       var timeinterval = setInterval(updateClock,1000);
   }
-
   //------ Displaying the Clock in HTML/CSS -------//
-
 //------ Countdown Clock -------//
  

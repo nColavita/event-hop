@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
 
  	protected
 
+ 	# store location of previous page
+ 	# params[:continue] is for joining event (@event page)
 	def store_location
 		puts "Storing: #{params[:continue]}"
 	    if params[:continue] # =~ /\/(events\/[0-9])\z/ # safelist
