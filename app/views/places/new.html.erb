@@ -6,7 +6,7 @@
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 			<div class="eventform">
-				<%= form_for @place do |f| %>
+				<%= form_for @place, html: { multipart: true } do |f| %>
 
 					<div class="form">
 						<%= f.label :name %>

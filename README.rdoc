@@ -1,28 +1,5 @@
-== README
+Event Hop
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Event Hop is an e-invite system built on Rails where users can create and send invitations to friends, join, plan, and comment on a group event.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+http://leah-eventhop.herokuapp.com/

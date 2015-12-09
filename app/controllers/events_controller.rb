@@ -52,14 +52,9 @@ class EventsController < ApplicationController
   end
 
   def leave
-
-    @event.users.delete(current_user)
-    redirect_to @event, notice: "Removed from event."
+   @event.users.delete(current_user)
+   redirect_to @event, notice: "Removed from event."
   end
-
-
-
-
 
   private
 

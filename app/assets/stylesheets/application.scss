@@ -1,0 +1,254 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+	background-color: #F7F7F7;
+	font-family: 'Josefin Sans', sans-serif;
+	color: #00476B;
+}
+
+#footernav {
+	width: 400px;
+	margin: 0 auto;
+}
+
+/************* Notices ************/
+
+.notice{
+	background-color: #78D95B;
+	height: 40px;
+	font-size: 1.25em; 
+	padding: .5em;
+	color: white;
+}
+
+.alert{
+	background-color: #D92F34;
+	height: 40px;
+	font-size: 1.25em; 
+	padding: .5em;
+	color: white;
+}
+
+.joinleave{
+	font-size: 1.5em;
+	/*margin-left: 20%;*/
+	font-family: 'Arial';
+}
+
+.joinleave a{
+	color: #1FE023;
+}
+
+#join a{
+	font-size: 1.5em;
+	color: #1FE023;
+}
+
+/************* Notices ************/
+
+/************* Nav Bar ************/
+
+.headernav {
+	font-size: 1.2em;
+	height: 3.5em;
+	border-bottom: solid #EAEAEA 1px; 
+}
+
+.headernav ul{
+	padding: 1em;
+	color: #7F8286;
+	overflow: hidden;
+}
+
+.link{
+	display: inline-block;
+	height: 100%;
+	text-decoration: none;
+}
+
+.link{
+	background-color: #ADADAD;
+	border-radius: 5px;
+	padding: .3em;
+	text-decoration: none;
+	float: right;
+	margin-right: .8em;
+}
+
+.link:hover{
+	background-color: #82E0DE;
+}
+
+.headernav ul a{
+	color: #FDFFF1;
+	padding: .5em;
+}
+
+/************* Nav Bar ************/
+
+/************* Footer ************/
+
+footer{
+	background-color: #ADADAD;
+	clear: both;
+	height: 80px;
+	margin-top: 15px;
+}
+
+#footernav li {
+	margin-left: 15px;
+	display: inline-block;
+	list-style-type: none;
+	font-size: 1em;
+}
+
+#footernav ul li a img {
+	display: inline-block;
+	margin-left: 15px;
+	margin-top: -5px;
+	width: 50px;
+	height: 50px;
+}
+
+/************* Footer ************/
+
+/************* User Profile Page ************/
+
+.container{
+	padding-top: 4em;
+}
+
+.event_info{
+	text-align: right;
+}
+
+.event_title{
+	font-family: 'Josefin Sans';
+	font-size: 4em;
+	/*margin-left: 12em;*/
+}
+
+.profilepic{
+	padding: 2em;
+}
+
+/************* User Profile Page ************/
+
+.pagetitle {
+	text-align: center;
+}
+
+/*************** Devise Forms  **************/
+
+.deviseforms {
+	width: 500px;
+	height: 470px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.signuplogin {
+	width: 500px;
+	text-align: center;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/************* Devise Forms ***************/
+
+#user_profilepic {
+	background-color: #FFFFFF;
+	margin: 0 auto;
+    text-align: center;
+	font-size: 1.4em;
+    width: 85%;
+    height: 50%;
+    padding: 0;
+    border: 5px solid #ccc;
+}
+
+#user_fname {
+	text-align: center;
+	font-size: 1.4em;
+    width: 85%;
+    height: 50%;
+    padding: 0;
+    border: 5px solid #ccc;
+}
+#user_lname {
+	text-align: center;
+	font-size: 1.4em;
+    width: 85%;
+    height: 50%;
+    padding: 0;
+    border: 5px solid #ccc;
+}
+#user_email {
+	text-align: center;
+	font-size: 1.4em;
+    width: 85%;
+    height: 50%;
+    padding: 0;
+    border: 5px solid #ccc;
+}
+#user_password {
+	text-align: center;
+	font-size: 1.4em;
+    width: 85%;
+    height: 50%;
+    padding: 0;
+    border: 5px solid #ccc;
+}
+#user_password_confirmation {
+	text-align: center;
+	font-size: 1.4em;
+    width: 85%;
+    height: 50%;
+    padding: 0;
+    border: 5px solid #ccc;
+}
+
+/************* Devise Forms ***************/
+
+.signuplogin input[type=submit] {
+    background: transparent;
+  	border-radius: 20px;
+  	font-size: 2em;
+}
+/*************** Devise Forms  **************/
+
+
+/*************** Countdown Clock  **************/
+
+.countdown{
+	padding: 1em;
+	margin-left: 65%;
+}
+
+#clockdiv {
+	font-size: 1.5em;
+	font-style: oblique;
+}
+
+/*************** Countdown Clock  **************/
+
+
+
+

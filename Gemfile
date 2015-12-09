@@ -3,8 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -25,10 +24,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 gem "paperclip", "~> 4.3"
-gem 'mandrill-api', require: "mandrill"
+gem 'mandrill-api'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'underscore-rails'
+# gem 'passenger'
+gem 'bootstrap-sass', '~> 3.3.5'
+gem 'aws-sdk', '< 2.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -42,6 +44,9 @@ gem 'underscore-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'quiet_assets'
+  # Use sqlite3 as the database for Active Record
+	gem 'sqlite3'
 end
 
 group :development do
@@ -51,3 +56,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+group :production do
+  gem 'pg'
+end
+
+gem 'rails_12factor', group: :production
+
+ruby "2.1.2"
