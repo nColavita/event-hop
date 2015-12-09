@@ -3,7 +3,12 @@
 		<p><%= link_to 'sign in/sign up to join this event', join_event_path(@event, continue: event_url(@event)), method: :post %></p>
 	</div>
 <% else %>
-	<div id="join" title="join">
-		<p><%= link_to 'join event now', join_event_path(@event, continue: event_url(@event)), method: :post %></p>
-	</div>
+	
+	<% if @event.users.include? current_user %>
+		<p><%= link_to 'leave this event', leave_event_path(@event), method: :delete %></p>
+	<% end %>
+	<% if @event.users.exclude? current_user %>
+	<p><%= link_to 'join event now', join_event_path(@event, continue: event_url(@event)), method: :post %></p>
+	<% end %>
 <% end %>
+

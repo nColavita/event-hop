@@ -26,6 +26,18 @@
 					<% end %>
 
 					<h1>Attending Events</h1>
+					 <% @joined_events.each  do |event| %>
+					 		<p><%= event.description %></p>
+							<p><%= event.place.name %></p>
+							<p><%= event.start %></p>
+							<%= link_to 'See the event', event_path(event) %>
+							<hr>
+					<% end %>
+ 
+
+
+
+
 					<!-- Logic here for Attending Events not Created -->
 					<h1>Your Passed Events</h1>
 					<% @user.events.each do |event| %>

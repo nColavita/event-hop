@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   	resources :events, shallow: true do
   		member do
   			post 'join'
+        delete 'leave'
   		end
   		resources :posts, shallow: true, only:[:create]
   	end
@@ -15,4 +16,4 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
 
-end
+end   
